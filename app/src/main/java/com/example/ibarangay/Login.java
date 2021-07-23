@@ -78,6 +78,7 @@ public class Login extends AppCompatActivity {
                             data[1] = strpassword;
 
                             PutData putData = new PutData("http:/192.168.254.114/iBarangay/ibarangay_login.php","POST", field, data);
+                            //PutData putData = new PutData("https://php1002001.000webhostapp.com/ibarangay_login.php","POST", field, data);
                             if(putData.startPut()){
                                 if(putData.onComplete()){
                                     String result = putData.getResult();
@@ -97,7 +98,7 @@ public class Login extends AppCompatActivity {
 
                 }
                 else{
-                    Toast.makeText(getApplicationContext(),"All fields are required", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"All fields are rdequired", Toast.LENGTH_SHORT).show();
                 }
             }
         });
