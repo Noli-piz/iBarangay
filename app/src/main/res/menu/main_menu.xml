@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/nav_announcement"
+            android:title="Announcement"
+            android:icon="@drawable/ic_announcement"/>
+
+        <item android:id="@+id/nav_request"
+            android:title="Request"
+            android:icon="@drawable/ic_request"/>
+
+        <item android:id="@+id/nav_service"
+            android:title="Miscelleneos Services"
+            android:icon="@drawable/ic_service"/>
+
+        <item android:id="@+id/nav_logout"
+            android:title="Logout"
+            android:icon="@drawable/ic_logout"/>
+    </group>
+
+</menu>

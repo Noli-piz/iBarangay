@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "478926858244",
+    "firebase_url": "https://ibarangay-23725-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "ibarangay-23725",
+    "storage_bucket": "ibarangay-23725.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478926858244:android:0346cf0c56432198976d51",
+        "android_client_info": {
+          "package_name": "com.example.ibarangay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478926858244-rvcdhhdci7iv1f085d8e4tbsfq77t14v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA68B4ye3kb2lQTv6uLSAPt81WYZzJFIQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478926858244-rvcdhhdci7iv1f085d8e4tbsfq77t14v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478926858244:android:e65b749ecd480c40976d51",
+        "android_client_info": {
+          "package_name": "com.example.navtesting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478926858244-rvcdhhdci7iv1f085d8e4tbsfq77t14v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA68B4ye3kb2lQTv6uLSAPt81WYZzJFIQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478926858244-rvcdhhdci7iv1f085d8e4tbsfq77t14v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
