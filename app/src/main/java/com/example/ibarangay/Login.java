@@ -98,7 +98,7 @@ public class Login extends AppCompatActivity {
 
                 }
                 else{
-                    Toast.makeText(getApplicationContext(),"All fields are rdequired", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"All fields are required", Toast.LENGTH_SHORT).show();
                 }
             }
         });

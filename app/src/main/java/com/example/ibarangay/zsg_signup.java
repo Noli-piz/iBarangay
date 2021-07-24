@@ -1,6 +1,6 @@
 package com.example.ibarangay;
 
-public class zsg_SignUp {
+public class zsg_signup {
 
     private String username="", password="", status = "False";
     private String strFname="", strMname="", strLname="", strSname="", strBirthplace="", Birthdate="";

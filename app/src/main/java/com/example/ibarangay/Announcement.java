@@ -9,6 +9,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -19,7 +23,12 @@ import android.widget.Toast;
 import com.example.ibarangay.anncmntcustomlistview.ListAdapter;
 import com.example.ibarangay.anncmntcustomlistview.User;
 import com.example.ibarangay.databinding.ActivityAnnouncementBinding;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -29,6 +38,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.InputStreamReader;
 import java.net.URI;
 import java.util.ArrayList;
@@ -167,14 +177,17 @@ public class Announcement extends AppCompatActivity {
 
                         JSONArray announcement = jsonResult.getJSONArray("announcement");
 
+                        //Retrieving of information
                         for (int i = 0; i < announcement.length(); i++) {
                             JSONObject anncmnt = announcement.getJSONObject(i);
                             int strid_announcement = anncmnt.getInt("id_announcement");
                             String strsubject = anncmnt.getString("Subject");
                             String strdate = anncmnt.getString("Date");
                             String strlevel = anncmnt.getString("Level");
+                            String strextention = anncmnt.getString("Extension");
                             String strdetails = anncmnt.getString("Details");
 
+                            //Retrieving of images
                             if (strlevel.equals("Dangerous")) {
                                 ArrImageID.add(R.drawable.ic_logo);
                             } else if (strlevel.equals("Normal")) {
@@ -182,6 +195,35 @@ public class Announcement extends AppCompatActivity {
                             } else {
                                 ArrImageID.add(R.drawable.ic_service);
                             }
+
+
+//                            try {
+//
+//                                StorageReference retrieveStorageReference = FirebaseStorage.getInstance().getReference().child("images/Noli");
+//
+//                                File localFile = File.createTempFile(strlevel, "jpg");
+//                                retrieveStorageReference.getFile(localFile)
+//                                        .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+//                                            @Override
+//                                            public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+//
+//                                                Bitmap bitmap = BitmapFactory.decodeFile(localFile.getAbsolutePath());
+//                                                ArrImageID.add(localFile);
+//
+//                                            }
+//                                        }).addOnFailureListener(new OnFailureListener() {
+//                                            @Override
+//                                            public void onFailure(@NonNull Exception exception) {
+//
+//                                                //Drawable drawable = getResources().getDrawable(R.drawable.img_noimage);
+//                                                //Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
+//                                                //ArrImageID.add(bitmap);
+//                                            }
+//                                        });
+//
+//                            }catch (Exception e){
+//                                Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+//                            }
 
                             ArrSubject.add(strsubject);
                             ArrDate.add(strdate);
@@ -193,6 +235,7 @@ public class Announcement extends AppCompatActivity {
                             User user = new User(ArrSubject.get(i),ArrDate.get(i), ArrDetails.get(i), ArrImageID.get(i));
                             userArrayList.add(user);
                         }
+
                         ListAdapter listAdapter = new ListAdapter(Announcement.this, userArrayList);
                         binding.listview.setAdapter(listAdapter);
                         binding.listview.setClickable(true);
@@ -204,7 +247,7 @@ public class Announcement extends AppCompatActivity {
                                 i.putExtra("subject",ArrSubject.get(position));
                                 i.putExtra("date",ArrDate.get(position));
                                 i.putExtra("details",ArrDetails.get(position));
-                                i.putExtra("imageid",ArrImageID.get(position));
+                                //i.putExtra("imageid",ArrImageID.get(position));
                                 startActivity(i);
 
                             }

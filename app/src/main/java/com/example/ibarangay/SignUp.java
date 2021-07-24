@@ -72,7 +72,7 @@ public class SignUp extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                zsg_SignUp signUp = new zsg_SignUp();
+                zsg_signup signUp = new zsg_signup();
                 try{
                     signUp.setStrFname(IETFname.getText().toString());
                     signUp.setStrMname(IETMname.getText().toString());
