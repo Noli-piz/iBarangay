@@ -20,10 +20,11 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                app:cardCornerRadius="100dp"
-                android:layout_marginStart="20dp">
+                android:layout_marginStart="20dp"
+                app:cardCornerRadius="20dp">
 
-                <com.google.android.material.imageview.ShapeableImageView
+                <ImageView
+                    android:adjustViewBounds="true"
                     android:id="@+id/profile_pic"
                     android:layout_width="80dp"
                     android:layout_height="80dp"

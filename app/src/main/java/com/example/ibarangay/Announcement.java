@@ -199,22 +199,23 @@ public class Announcement extends AppCompatActivity {
 
 //                            try {
 //
-//                                StorageReference retrieveStorageReference = FirebaseStorage.getInstance().getReference().child("images/Noli");
+//                                StorageReference retrieveStorageReference = FirebaseStorage.getInstance().getReference().child("images/noli");
 //
-//                                File localFile = File.createTempFile(strlevel, "jpg");
+//                                File localFile = File.createTempFile("noli", "jpg");
 //                                retrieveStorageReference.getFile(localFile)
 //                                        .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
 //                                            @Override
 //                                            public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
 //
 //                                                Bitmap bitmap = BitmapFactory.decodeFile(localFile.getAbsolutePath());
-//                                                ArrImageID.add(localFile);
-//
+//                                                ArrImageID.add(bitmap);
+//                                                Toast.makeText(getApplicationContext(), "Working",Toast.LENGTH_LONG).show();
 //                                            }
 //                                        }).addOnFailureListener(new OnFailureListener() {
 //                                            @Override
 //                                            public void onFailure(@NonNull Exception exception) {
 //
+//                                                Toast.makeText(getApplicationContext(), "Ann",Toast.LENGTH_LONG).show();
 //                                                //Drawable drawable = getResources().getDrawable(R.drawable.img_noimage);
 //                                                //Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
 //                                                //ArrImageID.add(bitmap);
@@ -247,7 +248,7 @@ public class Announcement extends AppCompatActivity {
                                 i.putExtra("subject",ArrSubject.get(position));
                                 i.putExtra("date",ArrDate.get(position));
                                 i.putExtra("details",ArrDetails.get(position));
-                                //i.putExtra("imageid",ArrImageID.get(position));
+                                i.putExtra("imageid",ArrImageID.get(position));
                                 startActivity(i);
 
                             }

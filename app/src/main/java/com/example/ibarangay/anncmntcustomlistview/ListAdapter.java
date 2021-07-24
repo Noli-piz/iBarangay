@@ -3,13 +3,17 @@ package com.example.ibarangay.anncmntcustomlistview;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.ImageDecoder;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,6 +27,8 @@ import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class ListAdapter extends ArrayAdapter<com.example.ibarangay.anncmntcustomlistview.User> {
@@ -53,7 +59,8 @@ public class ListAdapter extends ArrayAdapter<com.example.ibarangay.anncmntcusto
         tvDate = convertView.findViewById(R.id.date);
 
 
-        //imageView.setImageResource(user.imageId);
+        imageView.setImageResource(user.imageId);
+  //      imageView.setImageBitmap(user.imageId);
         tvSubject.setText("Subject: " + user.subject);
         tvDetails.setText("Details: " + user.details);
         tvDate.setText("Date: " +user.date);
@@ -61,35 +68,4 @@ public class ListAdapter extends ArrayAdapter<com.example.ibarangay.anncmntcusto
 
         return convertView;
     }
-
-
-
-//    private void shit() {
-//        try {
-//
-//            StorageReference retrieveStorageReference = FirebaseStorage.getInstance().getReference().child("images/Noli");
-//
-//            File localFile = File.createTempFile("noli", "jpg");
-//            retrieveStorageReference.getFile(localFile)
-//                    .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-//                        @Override
-//                        public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-//
-//                            Bitmap bitmap = BitmapFactory.decodeFile(localFile.getAbsolutePath());
-//                            imageView.setImageBitmap(bitmap);
-//
-//                        }
-//                    }).addOnFailureListener(new OnFailureListener() {
-//                @Override
-//                public void onFailure(@NonNull Exception exception) {
-//
-//                    //Drawable drawable = getResources().getDrawable(R.drawable.img_noimage);
-//                    //Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
-//                    //ArrImageID.add(bitmap);
-//                }
-//            });
-//
-//        } catch (Exception e) {
-//        }
-//    }
 }
