@@ -145,7 +145,6 @@ public class Request extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
-                        navigationView2.setCheckedItem(R.id.nav_service);
                         dialog.cancel();
                     }
                 });

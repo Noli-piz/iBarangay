@@ -3,8 +3,8 @@ package com.example.ibarangay;
 public class zsg_signup {
 
     private String username="", password="", status = "False";
-    private String strFname="", strMname="", strLname="", strSname="", strBirthplace="", Birthdate="";
-    private String CivilStatus="", Gender="", VoterStatus="", DateOfRegistration="", ContactNo="", Email="", Image="";
+    private String strFname="", strMname="",strLname="", strSname="", strBirthplace="", strBirthdate="", strPurok="";
+    private String strCivilStatus="", strGender="", strVoterStatus="", strDateOfRegistration="", strContactNo="", Email="", Image="";
 
     public String getUsername() {
         return username;
@@ -21,7 +21,6 @@ public class zsg_signup {
     public void setPassword(String password) {
         this.password = password;
     }
-
 
     public String getStrFname() {
         return strFname;
@@ -63,52 +62,50 @@ public class zsg_signup {
         this.strBirthplace = strBirthplace;
     }
 
-    public String getBirthdate() {
-        return Birthdate;
+    public String getStrBirthdate() {
+        return strBirthdate;
     }
 
     public void setBirthdate(String birthdate) {
-        Birthdate = birthdate;
+        strBirthdate = birthdate;
     }
 
-    public String getCivilStatus() {
-        return CivilStatus;
+    public String getStrCivilStatus() {
+        return strCivilStatus;
     }
 
-    public void setCivilStatus(String civilStatus) {
-        CivilStatus = civilStatus;
+    public void setStrCivilStatus(String civilStatus) {
+        strCivilStatus = civilStatus;
     }
 
-    public String getGender() {
-        return Gender;
+    public String getStrGender() {
+        return strGender;
     }
 
     public void setGender(String gender) {
-        Gender = gender;
+        strGender = gender;
     }
 
-    public String getVoterStatus() {
-        return VoterStatus;
+    public String getStrVoterStatus() {
+        return strVoterStatus;
     }
 
     public void setVoterStatus(String voterStatus) {
-        VoterStatus = voterStatus;
+        strVoterStatus = voterStatus;
     }
 
-    public String getDateOfRegistration() {
-        return DateOfRegistration;
+    public String getStrDateOfRegistration() {
+        return strDateOfRegistration;
     }
 
-    public void setDateOfRegistration(String dateOfRegistration) {
-        DateOfRegistration = dateOfRegistration;
-    }
+    public void setDateOfRegistration(String dateOfRegistration) { strDateOfRegistration = dateOfRegistration; }
 
-    public String getContactNo() {
-        return ContactNo;
+    public String getStrContactNo() {
+        return strContactNo;
     }
 
     public void setContactNo(String contactNo) {
-        ContactNo = contactNo;
+        strContactNo = contactNo;
     }
 
     public String getEmail() {
@@ -119,7 +116,7 @@ public class zsg_signup {
         Email = email;
     }
 
-    public String getImage() {
+    public String getStrImage() {
         return Image;
     }
 
@@ -129,5 +126,13 @@ public class zsg_signup {
 
     public String getStatus() {
         return status;
+    }
+
+    public String getStrPurok() {
+        return strPurok;
+    }
+
+    public void setStrPurok(String strPurok) {
+        this.strPurok = strPurok;
     }
 }

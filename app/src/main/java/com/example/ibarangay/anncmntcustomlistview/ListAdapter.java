@@ -19,6 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.ibarangay.R;
+import com.example.ibarangay.databinding.ActivityAnnouncementBinding;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FileDownloadTask;
@@ -58,13 +59,12 @@ public class ListAdapter extends ArrayAdapter<com.example.ibarangay.anncmntcusto
         tvDetails = convertView.findViewById(R.id.details);
         tvDate = convertView.findViewById(R.id.date);
 
+        Bitmap s = BitmapFactory.decodeFile(user.imageId);
 
-        imageView.setImageResource(user.imageId);
-  //      imageView.setImageBitmap(user.imageId);
+        imageView.setImageBitmap(s);
         tvSubject.setText("Subject: " + user.subject);
         tvDetails.setText("Details: " + user.details);
         tvDate.setText("Date: " +user.date);
-
 
         return convertView;
     }
