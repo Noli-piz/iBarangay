@@ -21,11 +21,14 @@ import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ibarangay.anncmntcustomlistview.ListAdapter;
 import com.example.ibarangay.anncmntcustomlistview.User;
 import com.example.ibarangay.databinding.ActivityAnnouncementBinding;
+import com.example.ibarangay.headerMenu.headerMenu;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.navigation.NavigationView;
@@ -66,6 +69,15 @@ public class Announcement extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigationView);
 
+        // Navigation Header
+        View headerview = navigationView.getHeaderView(0);
+        TextView navUsername = (TextView) headerview.findViewById(R.id.tvMenuName);
+        zsg_nameandimage nai = new zsg_nameandimage();
+        navUsername.setText(nai.getStrname());
+
+        ImageView navImage = (ImageView) headerview.findViewById(R.id.imgMenuProfile);
+        nai.RetrieveImg();
+        navImage.setImageBitmap(nai.getImg());
 
         //Navigation
         actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout ,R.string.menu_Open,R.string.menu_Close);

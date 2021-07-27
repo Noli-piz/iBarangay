@@ -54,7 +54,7 @@
         app:hintTextColor="@color/navy3">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ETusername"
+            android:id="@+id/S2Birthplace"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@color/navy2" />
@@ -62,7 +62,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtLayout1"
+        android:id="@+id/txtLayout1S2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="15dp"
@@ -97,7 +97,7 @@
         app:cornerRadius="23dp"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnsignup"
+        android:id="@+id/btnsignupS2"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:text="@string/signup"

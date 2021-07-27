@@ -15,7 +15,7 @@
         android:background="@color/navy3">
 
         <TextView
-            android:id="@+id/lblBack"
+            android:id="@+id/lblBack2"
             android:layout_gravity="start"
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
@@ -27,30 +27,6 @@
             android:textColor="@color/red"
             android:textSize="20dp"/>
 
-        <TextView
-            android:layout_gravity="start"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="13dp"
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="Sign Up"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textSize="50dp"/>
-
-        <TextView
-            android:layout_gravity="start"
-            android:layout_marginStart="30dp"
-            android:layout_marginBottom="30dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Let's get Started."
-            android:textStyle="bold"
-            android:textColor="@color/poorblack"
-            android:textSize="20dp"/>
-
         <androidx.cardview.widget.CardView
             android:layout_width="200dp"
             android:layout_height="200dp"
@@ -59,7 +35,7 @@
             app:cardCornerRadius="100dp">
 
             <ImageView
-                android:id="@+id/img_Profile"
+                android:id="@+id/img_Profile2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/img_avatar"
@@ -91,8 +67,9 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
+
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtLayout1"
+                android:id="@+id/txtLayout1S2"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
@@ -109,14 +86,14 @@
                 app:hintTextColor="@color/navy3">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/ETFname"
+                    android:id="@+id/S2Fname"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:backgroundTint="@color/navy2" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtLayout2"
+                android:id="@+id/txtLayout2S2"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
@@ -133,14 +110,14 @@
                 app:hintTextColor="@color/navy3">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/ETMname"
+                    android:id="@+id/S2Mname"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:backgroundTint="@color/navy2" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtLayout3"
+                android:id="@+id/txtLayout3S2"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
@@ -157,21 +134,32 @@
                 app:hintTextColor="@color/navy3">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/ETLname"
+                    android:id="@+id/S2Lname"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:backgroundTint="@color/navy2" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <TextView
+                android:id="@+id/invic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="15dp"
+                android:text="*You can leave this field blank."
+                android:textSize="10dp"
+                android:textColor="@color/red"/>
+
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtLayout4"
+                android:id="@+id/txtLayout4S2"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="15dp"
                 android:hint="@string/sname"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:textColorHint="@color/navy3"
+                textInputLayout.isHelperTextEnabled="true"
+                textInputLayout.error="Email can not be Empty!!!"
                 app:boxCornerRadiusBottomEnd="20dp"
                 app:boxCornerRadiusBottomStart="20dp"
                 app:boxCornerRadiusTopEnd="20dp"
@@ -180,38 +168,21 @@
                 app:boxStrokeWidthFocused="0dp"
                 app:hintTextColor="@color/navy3">
 
+
+
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/ETSname"
+                    android:id="@+id/S2Sname"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:backgroundTint="@color/navy2" />
             </com.google.android.material.textfield.TextInputLayout>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="20dp"
-                android:text="Account Information"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout4"
+                android:id="@+id/textInputLayout1S2"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="200dp"
                 android:layout_marginTop="15dp"
-                android:hint="@string/email"
+                android:hint="Birthplace"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:textColorHint="@color/navy3"
@@ -224,70 +195,195 @@
                 app:hintTextColor="@color/navy3">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/ETemail"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:backgroundTint="@color/navy2" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout1"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="15dp"
-                android:hint="@string/username"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:textColorHint="@color/navy3"
-                app:boxCornerRadiusBottomEnd="20dp"
-                app:boxCornerRadiusBottomStart="20dp"
-                app:boxCornerRadiusTopEnd="20dp"
-                app:boxCornerRadiusTopStart="20dp"
-                app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="0dp"
-                app:hintTextColor="@color/navy3">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/ETusername"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:backgroundTint="@color/navy2" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout2"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:hint="@string/password"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:textColorHint="@color/navy3"
-                app:boxCornerRadiusBottomEnd="20dp"
-                app:boxCornerRadiusBottomStart="20dp"
-                app:boxCornerRadiusTopEnd="20dp"
-                app:boxCornerRadiusTopStart="20dp"
-                app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="0dp"
-                app:hintTextColor="@color/navy3"
-                app:passwordToggleEnabled="true">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/ETpassword"
+                    android:id="@+id/S2Birthplace"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:backgroundTint="@color/navy2"
-                    android:inputType="textPassword"/>
-
+                    android:inputType="textMultiLine"
+                    android:lines="10"
+                    android:singleLine="false"
+                    android:scrollbars="vertical"
+                    android:gravity="start"/>
             </com.google.android.material.textfield.TextInputLayout>
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/navy2"
+                android:elevation="0dp"
+                app:cardCornerRadius="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="start"
+                    android:text="Birthdate"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnBirthDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="35dp"
+                    style="?android:spinnerStyle"
+                    android:text="JAN 01 2020"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:onClick="opedDatePicker"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/navy2"
+                android:elevation="0dp"
+                app:cardCornerRadius="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="start"
+                    android:text="Select Civil Status"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spnrCivilStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="25dp"
+                    android:textSize="20sp"
+                    android:theme="@style/spinnerTheme"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/navy2"
+                android:elevation="0dp"
+                app:cardCornerRadius="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="start"
+                    android:text="Select Gender"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spnrGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="25dp"
+                    android:textSize="20sp"
+                    android:theme="@style/spinnerTheme"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/navy2"
+                android:elevation="0dp"
+                app:cardCornerRadius="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="start"
+                    android:text="Select Purok"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+                <Spinner
+                    android:id="@+id/spnrPurok"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="25dp"
+                    android:textSize="20sp"
+                    android:theme="@style/spinnerTheme"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/navy2"
+                android:elevation="0dp"
+                app:cardCornerRadius="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="start"
+                    android:text="Select Voter Status"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+                <Spinner
+                    android:id="@+id/spnrVoterStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="25dp"
+                    android:textSize="20sp"
+                    android:theme="@style/spinnerTheme"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/navy2"
+                android:elevation="0dp"
+                app:cardCornerRadius="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="start"
+                    android:text="Date of Registration"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnDateOfRegistration"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="35dp"
+                    style="?android:spinnerStyle"
+                    android:text="JAN 01 2020"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:onClick="opedDatePicker2"/>
+            </androidx.cardview.widget.CardView>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout9"
+                android:id="@+id/textInputLayout12S2"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
-                android:hint="Re-enter Password"
+                android:hint="Cedula No."
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:textColorHint="@color/navy3"
@@ -297,21 +393,47 @@
                 app:boxCornerRadiusTopStart="20dp"
                 app:boxStrokeWidth="0dp"
                 app:boxStrokeWidthFocused="0dp"
-                app:hintTextColor="@color/navy3"
-                app:passwordToggleEnabled="true">
+                app:hintTextColor="@color/navy3">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ETRpassword"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="@color/navy2"
-                android:inputType="textPassword"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ETCedulaNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/navy2"/>
             </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout22"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:hint="Phone No."
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColorHint="@color/navy3"
+                app:boxCornerRadiusBottomEnd="20dp"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxCornerRadiusTopEnd="20dp"
+                app:boxCornerRadiusTopStart="20dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintTextColor="@color/navy3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ETContactNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/navy2"
+                    android:inputType="number"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
         </LinearLayout>
 
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnsignup"
+            android:id="@+id/btnsignupS2"
             android:layout_marginTop="10dp"
             android:layout_width="250dp"
             android:layout_height="60dp"

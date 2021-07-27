@@ -7,23 +7,26 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
-import java.io.IOException;
-import java.net.InetAddress;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.net.UnknownHostException;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.URI;
 
 public class Login extends AppCompatActivity {
 
@@ -35,10 +38,16 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        IETUsername = findViewById(R.id.ETusername);
+        zsg_nameandimage n = new zsg_nameandimage();
+        n.reset();
+
+        zsg_signup s = new zsg_signup();
+        s.reset();
+
+        IETUsername = findViewById(R.id.S2Birthplace);
         IETPassword = findViewById(R.id.ETpassword);
         BTNLogin = findViewById(R.id.btnlogin);
-        BTNSignup = findViewById(R.id.btnsignup);
+        BTNSignup = findViewById(R.id.btnsignupS2);
 
         BTNSignup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,9 +93,19 @@ public class Login extends AppCompatActivity {
                                     String result = putData.getResult();
                                     if(result.equals("Login Success")){
                                         //Toast.makeText(getApplicationContext(),result, Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(getApplicationContext(), Announcement.class);
-                                        startActivity(intent);
-                                        finish();
+                                        zsg_nameandimage nai = new zsg_nameandimage();
+                                        nai.setStrusername(strusername);
+                                        nai.nameandimage();
+
+                                        Handler handler = new Handler();
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                Intent intent = new Intent(getApplicationContext(), Announcement.class);
+                                                startActivity(intent);
+                                                finish();
+                                            }
+                                        }, 1000);
                                     }
                                     else{
                                         Toast.makeText(getApplicationContext(),result, Toast.LENGTH_SHORT).show();

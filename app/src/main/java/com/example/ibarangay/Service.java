@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
@@ -45,6 +47,15 @@ public class Service extends AppCompatActivity {
         //Navigation
         drawerLayout3 = findViewById(R.id.drawer_layout3);
         navigationView3 = findViewById(R.id.navigationView3);
+
+        // Navigation Header
+        View headerview = navigationView3.getHeaderView(0);
+        TextView navUsername = (TextView) headerview.findViewById(R.id.tvMenuName);
+        zsg_nameandimage nai = new zsg_nameandimage();
+        navUsername.setText(nai.getStrname());
+
+        ImageView navImage = (ImageView) headerview.findViewById(R.id.imgMenuProfile);
+        navImage.setImageBitmap(nai.getImg());
 
         //Tab
         Ser_SectionsPagerAdapter sectionsPagerAdapter = new Ser_SectionsPagerAdapter(this, getSupportFragmentManager());

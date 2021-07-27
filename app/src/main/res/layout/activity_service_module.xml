@@ -18,10 +18,10 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Item" />
 
         <Spinner
-            android:id="@+id/spinner3"
+            android:id="@+id/spnrItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -89,10 +89,10 @@
             android:id="@+id/textView12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Delivery Option" />
 
         <Spinner
-            android:id="@+id/spinner4"
+            android:id="@+id/spnerDelivery"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

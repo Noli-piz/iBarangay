@@ -13,6 +13,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.ibarangay.main.Req_SectionsPagerAdapter;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
@@ -44,6 +46,15 @@ public class Request extends AppCompatActivity {
         //Navigation
         drawerLayout2 = findViewById(R.id.drawer_layout2);
         navigationView2 = findViewById(R.id.navigationView2);
+
+        // Navigation Header
+        View headerview = navigationView2.getHeaderView(0);
+        TextView navUsername = (TextView) headerview.findViewById(R.id.tvMenuName);
+        zsg_nameandimage nai = new zsg_nameandimage();
+        navUsername.setText(nai.getStrname());
+
+        ImageView navImage = (ImageView) headerview.findViewById(R.id.imgMenuProfile);
+        navImage.setImageBitmap(nai.getImg());
 
         //Tab
         Req_SectionsPagerAdapter sectionsPagerAdapter = new Req_SectionsPagerAdapter(this, getSupportFragmentManager());

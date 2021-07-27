@@ -16,6 +16,7 @@
         android:theme="@style/Theme.IBarangay"
         android:usesCleartextTraffic="true">
         <activity android:name=".AnnouncementModule"></activity>
+        <activity android:name=".SignUp2"></activity>
         <activity android:name=".ServiceModule" />
         <activity android:name=".RequestModule" />
         <activity android:name=".Request" />

@@ -32,4 +32,15 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="NoStyle" parent="Theme.MaterialComponents.DayNight.DarkActionBar" />
+
+    <style name="spinnerTheme">
+        <item name="android:textColor">@color/navy1</item>
+        <item name="android:textColorHint">@color/white</item>
+    </style>
+
+    <style name="circle">
+        <item name="cornerSize">50%</item>
+    </style>
+
 </resources>

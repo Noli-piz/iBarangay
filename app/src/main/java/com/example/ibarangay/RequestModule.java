@@ -104,8 +104,6 @@ public class RequestModule extends AppCompatActivity {
             }
         }
     }
-    //END
-
 
     //Retrieve DeliveryOption
     class RetrieveDO extends AsyncTask<String, String, String> {
@@ -170,6 +168,7 @@ public class RequestModule extends AppCompatActivity {
             }
         }
     }
+
 
 
     //Back Button

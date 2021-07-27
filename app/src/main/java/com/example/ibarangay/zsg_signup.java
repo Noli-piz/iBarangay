@@ -2,9 +2,39 @@ package com.example.ibarangay;
 
 public class zsg_signup {
 
-    private String username="", password="", status = "False";
-    private String strFname="", strMname="",strLname="", strSname="", strBirthplace="", strBirthdate="", strPurok="";
-    private String strCivilStatus="", strGender="", strVoterStatus="", strDateOfRegistration="", strContactNo="", Email="", Image="";
+    private static String username="", password="", status = "False";
+    private static String strFname="", strMname="",strLname="", strSname="", strBirthplace="", strBirthdate="", strPurok="";
+    private static String strCivilStatus="", strGender="", strVoterStatus="", strDateOfRegistration="", strContactNo="", Email="", Image="", strCedulaNo="";
+
+
+
+    public void reset(){
+        this.Email = "";
+        this.username = "";
+        this.password="";
+
+        this.strFname = "";
+        this.strMname = "";
+        this.strLname = "";
+        this.strSname = "";
+        this.strBirthdate = "";
+        this.strBirthplace = "";
+        this.strCivilStatus = "";
+        this.strGender = "";
+        this.strVoterStatus = "";
+        this.strDateOfRegistration = "";
+        this.strContactNo = "";
+        this.Image = "";
+        this.strCedulaNo = "";
+    }
+
+    public String getStrCedulaNo() {
+        return strCedulaNo;
+    }
+
+    public void setStrCedulaNo(String strCedulaNo) {
+        this.strCedulaNo = strCedulaNo;
+    }
 
     public String getUsername() {
         return username;
